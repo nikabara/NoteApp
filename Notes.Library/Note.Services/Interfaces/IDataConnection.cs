@@ -4,6 +4,6 @@ namespace Note.Services.Interfaces
 {
     internal interface IDataConnection
     {
-        public Task<List<NotesCS>> GetAllNotes();
+        public Task<List<NotesCS>> GetAllNotesAsync();
     }
 }
