@@ -5,7 +5,7 @@ using System.Data;
 
 namespace Note.Services
 {
-    internal class SqlDataConnector : IDataConnection
+    public class SqlDataConnector : IDataConnection
     {
         public async Task<List<NotesCS>> GetAllNotesAsync()
         {

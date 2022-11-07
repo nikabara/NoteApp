@@ -2,7 +2,7 @@
 
 namespace Note.Services.Interfaces
 {
-    internal interface IDataConnection
+    public interface IDataConnection
     {
         public Task<List<NotesCS>> GetAllNotesAsync();
     }
