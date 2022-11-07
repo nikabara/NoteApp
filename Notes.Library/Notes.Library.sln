@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.1.32319.34
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Notes.Library", "Notes.Library\Notes.Library.csproj", "{A69F392A-0E78-4D37-B84D-24271AC548BF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Notes.Library", "Notes.Library\Notes.Library.csproj", "{A69F392A-0E78-4D37-B84D-24271AC548BF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Note.Services", "Note.Services\Note.Services.csproj", "{1CCEE928-C596-494F-B3C9-80FFAABCD1DD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Note.Services", "Note.Services\Note.Services.csproj", "{1CCEE928-C596-494F-B3C9-80FFAABCD1DD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Note.Library.Test", "Note.Library.Test\Note.Library.Test.csproj", "{B667B494-D24C-4442-A956-5B8687CAEECB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{1CCEE928-C596-494F-B3C9-80FFAABCD1DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1CCEE928-C596-494F-B3C9-80FFAABCD1DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1CCEE928-C596-494F-B3C9-80FFAABCD1DD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B667B494-D24C-4442-A956-5B8687CAEECB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B667B494-D24C-4442-A956-5B8687CAEECB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B667B494-D24C-4442-A956-5B8687CAEECB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B667B494-D24C-4442-A956-5B8687CAEECB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
