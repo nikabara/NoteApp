@@ -7,7 +7,7 @@ namespace Note.Services
 {
     internal class SqlDataConnector : IDataConnection
     {
-        public async Task<List<NotesCS>> GetAllNotes()
+        public async Task<List<NotesCS>> GetAllNotesAsync()
         {
             const string sqlExpression = "sp_SelectedNotes";
             List<NotesCS> result = new();
