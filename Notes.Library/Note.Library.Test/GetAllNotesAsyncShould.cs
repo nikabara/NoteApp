@@ -18,8 +18,8 @@ namespace Note.Library.Test
                 new NotesCS()
                 {
                     NoteId = 1,
-                    NoteHeader = "Test",
-                    NoteDescr = "This is test note for C# =)",
+                    NoteHeader = "TestNote",
+                    NoteDescr = "TestNoteDescr",
                     NoteDate = DateTime.Now
                 }
             };
