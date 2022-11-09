@@ -46,7 +46,50 @@ namespace Note.Services
                    await connection.CloseAsync();
                 }
             }
+            return result;
+        }
 
+        public async Task<List<NotesErrorLog>> GetAllErrorLogAsync()
+        {
+            const string sqlExpression = "sp_SelectedErrors";
+            List<NotesErrorLog> result = new();
+
+            using (SqlConnection connection = new(GlobalConfig.ConnectionString()))
+            {
+                try
+                {
+                    await connection.OpenAsync();
+
+                    SqlCommand sqlCmd = new (sqlExpression, connection);
+                    sqlCmd.CommandType = CommandType.StoredProcedure;
+
+                    SqlDataReader reader = await sqlCmd.ExecuteReaderAsync();
+
+                    if (reader.HasRows)
+                    {
+                        while (await reader.ReadAsync())
+                        {
+                            result.Add(new NotesErrorLog()
+                            {
+                                ErrorId = reader.GetInt32(0),
+                                ErrorNumber = reader.GetInt32(1),
+                                ErrorState = reader.GetByte(2),
+                                ErrorSeverity = reader.GetByte(3),
+                                ErrorMessage = reader.GetString(4),
+                                ErrorLine = reader.GetInt32(5)
+                            });
+                        }
+                    }
+                }
+                catch (SqlException)
+                {
+                    throw;
+                }
+                finally
+                {
+                    await connection.CloseAsync();
+                }
+            }
             return result;
         }
     }
